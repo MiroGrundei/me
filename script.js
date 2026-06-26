@@ -1,31 +1,42 @@
 /* ============================================
-   script.js — personal website interactions
+   script.js - personal website interactions
    ============================================ */
 
 (function () {
   'use strict';
 
-  // ── Year in footer ──────────────────────────
+  // Year in footer
   const yearEl = document.getElementById('year');
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
   }
 
-  // ── Navbar: add "scrolled" class on scroll ──
+  const themes = {
+    'deep-lab': 'styles-deep-lab.css',
+    academic: 'styles-academic.css',
+    console: 'styles-console.css',
+    minimal: 'styles-minimal.css'
+  };
+  const requestedTheme = new URLSearchParams(window.location.search).get('theme');
+  const themeStylesheet = document.getElementById('theme-stylesheet');
+  if (themeStylesheet && themes[requestedTheme]) {
+    themeStylesheet.setAttribute('href', themes[requestedTheme]);
+  }
+
   const navbar = document.getElementById('navbar');
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  const sections = Array.from(document.querySelectorAll('section[id]'));
+
+  // Navbar: add "scrolled" class on scroll
   function handleScroll() {
     if (navbar) {
       navbar.classList.toggle('scrolled', window.scrollY > 20);
     }
     highlightNavLink();
   }
-  window.addEventListener('scroll', handleScroll, { passive: true });
-  handleScroll(); // run once on load
 
-  // ── Mobile nav toggle ───────────────────────
-  const navToggle = document.querySelector('.nav-toggle');
-  const navLinks  = document.querySelector('.nav-links');
-
+  // Mobile nav toggle
   if (navToggle && navLinks) {
     navToggle.addEventListener('click', function () {
       const expanded = this.getAttribute('aria-expanded') === 'true';
@@ -33,7 +44,6 @@
       navLinks.classList.toggle('open');
     });
 
-    // Close menu when a link is clicked
     navLinks.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
         navToggle.setAttribute('aria-expanded', 'false');
@@ -42,33 +52,37 @@
     });
   }
 
-  // ── Active nav link on scroll ───────────────
-  const sections = Array.from(document.querySelectorAll('section[id]'));
-
+  // Active nav link on scroll
   function highlightNavLink() {
     if (!navLinks) return;
+
     const scrollY = window.scrollY + 100;
     let current = '';
+
     sections.forEach(function (section) {
       if (scrollY >= section.offsetTop) {
         current = section.id;
       }
     });
+
     navLinks.querySelectorAll('a').forEach(function (link) {
       link.classList.toggle('active', link.getAttribute('href') === '#' + current);
     });
   }
 
-  // ── Contact form (client-side feedback only) ─
-  const form       = document.getElementById('contact-form');
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
+
+  // Contact form (client-side feedback only)
+  const form = document.getElementById('contact-form');
   const formStatus = document.getElementById('form-status');
 
   if (form && formStatus) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      const name    = form.name.value.trim();
-      const email   = form.email.value.trim();
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
       const message = form.message.value.trim();
 
       if (!name || !email || !message) {
@@ -81,7 +95,6 @@
         return;
       }
 
-      // Simulate successful submission (replace with real endpoint if needed)
       showStatus('Thanks for your message! I\'ll be in touch soon.', 'success');
       form.reset();
     });
@@ -97,7 +110,7 @@
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
 
-  // ── Scroll-reveal (Intersection Observer) ───
+  // Scroll-reveal
   const revealEls = document.querySelectorAll(
     '.skill-card, .project-card, .stat, .about-text'
   );

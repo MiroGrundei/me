@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Miro Grundei</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link id="theme-stylesheet" rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <!-- Navigation -->
@@ -13,8 +13,8 @@
       <a href="#home" class="nav-logo">MG</a>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
+        <li><a href="#projects">Research</a></li>
+        <li><a href="#skills">Methods</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
@@ -30,9 +30,11 @@
     <div class="hero-content">
       <p class="hero-greeting">Hello, I'm</p>
       <h1 class="hero-name">Dr. Miro Grundei</h1>
-      <p class="hero-tagline">Neuroscientist &amp; Data Scientist</p>
+      <p class="hero-tagline">
+        I combine neuroscience, neuroimaging, and data science to study how the brain predicts, updates, and represents the world.
+      </p>
       <div class="hero-actions">
-        <a href="#projects" class="btn btn-primary">View My Work</a>
+        <a href="#projects" class="btn btn-primary">Selected Research</a>
         <a href="#contact" class="btn btn-secondary">Get in Touch</a>
       </div>
     </div>
@@ -49,8 +51,8 @@
       <div class="about-grid">
         <div class="about-text">
           <p>
-            I’m a neuroscientist and data scientist working at the intersection of cognitive neuroscience, brain stimulation, and computational modeling.
-            My research integrates neuroimaging, multivariate decoding (MVPA), and experimental design to investigate how the brain represents information, adapts to change, and supports behavior.
+            I'm a computational neuroscientist working at the intersection of cognitive neuroscience, predictive processing, brain stimulation, and data science.
+            My research combines EEG, fMRI, multivariate decoding, computational modeling, and experimental design to investigate how the brain represents information, detects surprise, and adapts behavior.
           </p>
           <p>
             I focus on translating complex neural signals into interpretable models and reproducible pipelines that connect brain dynamics with cognition.
@@ -67,6 +69,11 @@
             <span class="stat-label">Research Studies</span>
           </div>
           <div class="stat">
+            <span class="stat-number">176+</span>
+            <span class="stat-label">Citations</span>
+            <span class="stat-detail">h=6</span>
+          </div>
+          <div class="stat">
             <span class="stat-number">3</span>
             <span class="stat-label">Core Focus Areas</span>
           </div>
@@ -75,79 +82,101 @@
     </div>
   </section>
 
-  <!-- Skills -->
-  <section id="skills" class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <div class="skill-icon">&#128187;</div>
-          <h3>Research Methods</h3>
-          <ul>
-            <li>Behavioral experiment design and cognitive task development</li>
-            <li>Hypothesis-driven study design and scientific reporting</li>
-          </ul>
-        </div>
-        <div class="skill-card">
-          <div class="skill-icon">&#9881;</div>
-          <h3>Neuroimaging & Brain Data</h3>
-          <ul>
-            <li>EEG and fMRI preprocessing pipelines</li>
-            <li>MVPA, time-series analysis, and brain stimulation methods</li>
-          </ul>
-        </div>
-        <div class="skill-card">
-          <div class="skill-icon">&#128736;</div>
-          <h3>Data Science & Computing</h3>
-          <ul>
-            <li>Python, scientific computing, and statistical modeling</li>
-            <li>Reproducible workflows with Git, Docker, and Linux</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- Projects -->
-  <section id="projects" class="section">
+  <section id="projects" class="section section-alt">
     <div class="container">
-      <h2 class="section-title">Research Highlights</h2>
+      <h2 class="section-title">Selected Research</h2>
       <div class="projects-grid">
         <article class="project-card">
           <div class="project-header">
-            <span class="project-icon">&#127760;</span>
-            <div class="project-links">
-              <a href="https://github.com/MiroGrundei" target="_blank" rel="noopener noreferrer" aria-label="View on GitHub">
-                &#128279;
-              </a>
-            </div>
+            <span class="project-icon">&#128202;</span>
           </div>
-          <h3>Neural Representation</h3>
-          <p>Research exploring how neural representations evolve during working memory processing using neuroimaging and decoding methods.</p>
+          <h3>Bayesian Modeling &amp; Prediction Error</h3>
+          <p>
+            I investigate how the brain encodes surprise and updates beliefs across sensory systems, combining Bayesian modeling, EEG/fMRI, and predictive-processing frameworks.
+          </p>
           <ul class="project-tags">
-            <li>Neuroimaging</li>
-            <li>MVPA</li>
-            <li>Cognitive Neuroscience</li>
+            <li>Bayesian surprise</li>
+            <li>Multimodal EEG</li>
+            <li>fMRI expectation violation</li>
+            <li>Active inference</li>
+            <li>Somatosensory MMN</li>
           </ul>
         </article>
 
-        <article class="project-card project-card--placeholder">
+        <article class="project-card">
           <div class="project-header">
-            <span class="project-icon">&#128161;</span>
+            <span class="project-icon">&#9889;</span>
           </div>
-          <h3>Brain Stimulation & Behavior</h3>
-          <p>Ongoing work on linking non-invasive brain stimulation with cognitive performance and neural representations.</p>
+          <h3>Brain Stimulation &amp; Cognitive Dynamics</h3>
+          <p>
+            I study how non-invasive brain stimulation interacts with neural activity and cognitive performance, especially in working-memory and concurrent tDCS-fMRI contexts.
+          </p>
           <ul class="project-tags">
-            <li>Brain Stimulation</li>
-            <li>Representational Similarity Analysis</li>
+            <li>tDCS</li>
+            <li>Working memory</li>
+            <li>Concurrent tDCS-fMRI</li>
+            <li>Cognitive performance</li>
+          </ul>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <span class="project-icon">&#128269;</span>
+          </div>
+          <h3>Neural Decoding of Working Memory</h3>
+          <p>
+            I use multivariate decoding to link parietal fMRI activity patterns with tactile working-memory content and behavioral performance.
+          </p>
+          <ul class="project-tags">
+            <li>MVPA</li>
+            <li>Tactile working memory</li>
+            <li>Parietal cortex</li>
+            <li>fMRI patterns</li>
           </ul>
         </article>
       </div>
 
       <div class="projects-cta">
-        <a href="https://github.com/MiroGrundei" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-          See All on GitHub
+        <a href="https://scholar.google.de/citations?user=_nu06JwAAAAJ&hl=de" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          View Google Scholar
         </a>
+        <a href="https://github.com/MiroGrundei" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          View GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title">Methods &amp; Tools</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-icon">&#129504;</div>
+          <h3>Experimental Design &amp; Neuroimaging</h3>
+          <ul>
+            <li>Behavioral task design for sensory, working-memory, and decision-making experiments</li>
+            <li>EEG and fMRI studies, non-invasive brain stimulation, and concurrent tDCS-fMRI</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">&#128202;</div>
+          <h3>Computational Modeling &amp; Data Analysis</h3>
+          <ul>
+            <li>Bayesian modeling, probabilistic inference, and predictive-processing frameworks</li>
+            <li>Multivariate analyses including decoding, representational similarity analysis, and connectivity modeling</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <div class="skill-icon">&#128295;</div>
+          <h3>Scientific Computing &amp; Reproducibility</h3>
+          <ul>
+            <li>Analysis pipelines in Python and MATLAB for neuroimaging, statistics, and model-based workflows</li>
+            <li>High-performance computing with SLURM, plus Git, Docker, Linux, and reproducible scientific workflows</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
@@ -157,7 +186,7 @@
     <div class="container">
       <h2 class="section-title">Get in Touch</h2>
       <p class="contact-intro">
-        I’m open to collaborations in neuroscience, neuroimaging, and data science. Feel free to reach out.
+        I'm open to collaborations in neuroscience, neuroimaging, and data science. Feel free to reach out.
       </p>
       <form class="contact-form" id="contact-form" novalidate>
         <div class="form-group">
@@ -182,6 +211,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-links">
+        <a href="https://scholar.google.de/citations?user=_nu06JwAAAAJ&hl=de" target="_blank" rel="noopener noreferrer">Google Scholar</a>
         <a href="https://github.com/MiroGrundei" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
       <p class="footer-copy">&copy; <span id="year"></span> Miro Grundei. All rights reserved.</p>

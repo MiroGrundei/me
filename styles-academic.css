@@ -1,0 +1,66 @@
+@import url("styles.css");
+
+/* Academic Light: publication-like, bright, and restrained. */
+:root {
+  --color-bg: #f7f5ef;
+  --color-surface: #ffffff;
+  --color-border: #d8d2c3;
+  --color-accent: #256f7b;
+  --color-accent-light: #4e9aa5;
+  --color-text: #18232b;
+  --color-muted: #5d6870;
+  --radius: 8px;
+}
+
+body {
+  background: #f7f5ef;
+}
+
+#navbar.scrolled {
+  background-color: rgba(247, 245, 239, 0.94);
+}
+
+.section-alt {
+  background-color: #ece8dd;
+}
+
+.hero::before {
+  background:
+    linear-gradient(180deg, rgba(37, 111, 123, 0.11), transparent 58%),
+    linear-gradient(90deg, rgba(215, 188, 123, 0.14), transparent 45%);
+}
+
+.hero-name {
+  background: linear-gradient(135deg, #18232b 15%, #256f7b 78%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.skill-card {
+  background: #ffffff;
+}
+
+.project-card,
+.stat {
+  background: #ffffff;
+}
+
+.btn-primary {
+  background: #256f7b;
+}
+
+.btn-secondary:hover {
+  background: #256f7b;
+}
+
+.project-tags li {
+  background: #e2eee9;
+  color: #256f7b;
+}
+
+.form-group input,
+.form-group textarea {
+  background: #ffffff;
+}
+
