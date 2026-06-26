@@ -1,0 +1,68 @@
+@import url("styles.css");
+
+/* Minimal Researcher: quieter hierarchy, warm accent, fewer effects. */
+:root {
+  --color-bg: #111111;
+  --color-surface: #171717;
+  --color-border: #303030;
+  --color-accent: #d6a85f;
+  --color-accent-light: #efd19a;
+  --color-text: #f1eee8;
+  --color-muted: #aaa39a;
+  --radius: 4px;
+}
+
+body {
+  background: #111111;
+}
+
+#navbar.scrolled {
+  background-color: rgba(17, 17, 17, 0.95);
+}
+
+.hero::before {
+  background: linear-gradient(180deg, rgba(214, 168, 95, 0.09), transparent 54%);
+}
+
+.hero-name {
+  background: none;
+  -webkit-text-fill-color: currentColor;
+  color: var(--color-text);
+}
+
+.section-title::after {
+  width: 42%;
+}
+
+.skill-card,
+.project-card,
+.stat {
+  box-shadow: none;
+}
+
+.skill-card:hover,
+.project-card:hover,
+.stat:hover {
+  transform: translateY(-3px);
+}
+
+.btn {
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background: #d6a85f;
+  color: #111111;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  background: #efd19a;
+  color: #111111;
+}
+
+.project-tags li {
+  background: rgba(214, 168, 95, 0.12);
+  color: #efd19a;
+  border-radius: 4px;
+}

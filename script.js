@@ -12,6 +12,7 @@
   }
 
   const themes = {
+    base: 'styles.css',
     'deep-lab': 'styles-deep-lab.css',
     academic: 'styles-academic.css',
     console: 'styles-console.css',
