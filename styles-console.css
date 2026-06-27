@@ -1,0 +1,77 @@
+@import url("styles.css");
+
+/* Neuroimaging Console: analytical, high-contrast, and figure-inspired. */
+:root {
+  --color-bg: #050708;
+  --color-surface: #0b1113;
+  --color-border: #1c3335;
+  --color-accent: #00d0ff;
+  --color-accent-light: #99f0ff;
+  --color-text: #effcff;
+  --color-muted: #8da7ad;
+  --radius: 6px;
+}
+
+body {
+  background:
+    linear-gradient(rgba(0, 208, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 208, 255, 0.035) 1px, transparent 1px),
+    #050708;
+  background-size: 32px 32px;
+}
+
+#navbar.scrolled {
+  background-color: rgba(5, 7, 8, 0.94);
+}
+
+.nav-logo,
+.hero-greeting,
+.project-tags li,
+.stat-detail {
+  font-family: var(--font-mono);
+}
+
+.hero::before {
+  background:
+    linear-gradient(180deg, rgba(0, 208, 255, 0.12), transparent 64%),
+    linear-gradient(90deg, rgba(122, 255, 182, 0.08), transparent 52%);
+}
+
+.hero-name {
+  background: linear-gradient(135deg, #effcff 22%, #00d0ff 70%, #7affb6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.skill-card,
+.project-card,
+.stat,
+.form-group input,
+.form-group textarea {
+  background: rgba(11, 17, 19, 0.94);
+}
+
+.skill-card,
+.project-card,
+.stat {
+  box-shadow: inset 0 0 0 1px rgba(0, 208, 255, 0.05);
+}
+
+.btn-primary {
+  background: #00d0ff;
+  color: #050708;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  background: #7affb6;
+  color: #050708;
+}
+
+.project-tags li {
+  background: rgba(0, 208, 255, 0.1);
+  border: 1px solid rgba(0, 208, 255, 0.22);
+  color: #99f0ff;
+}
+
