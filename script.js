@@ -74,43 +74,6 @@
   window.addEventListener('scroll', handleScroll, { passive: true });
   handleScroll();
 
-  // Contact form (client-side feedback only)
-  const form = document.getElementById('contact-form');
-  const formStatus = document.getElementById('form-status');
-
-  if (form && formStatus) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      const name = form.name.value.trim();
-      const email = form.email.value.trim();
-      const message = form.message.value.trim();
-
-      if (!name || !email || !message) {
-        showStatus('Please fill in all fields.', 'error');
-        return;
-      }
-
-      if (!isValidEmail(email)) {
-        showStatus('Please enter a valid email address.', 'error');
-        return;
-      }
-
-      showStatus('Thanks for your message! I\'ll be in touch soon.', 'success');
-      form.reset();
-    });
-  }
-
-  function showStatus(msg, type) {
-    if (!formStatus) return;
-    formStatus.textContent = msg;
-    formStatus.className = 'form-status ' + type;
-  }
-
-  function isValidEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  }
-
   // Scroll-reveal
   const revealEls = document.querySelectorAll(
     '.skill-card, .project-card, .stat, .about-text'
